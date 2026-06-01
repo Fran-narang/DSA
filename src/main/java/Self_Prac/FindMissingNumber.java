@@ -30,10 +30,24 @@ public class FindMissingNumber {
 
             for (int i = 1; i <= n; i++)
             {xor ^= i;}       // XOR 1 to n
-            for (int num : arr) xor ^= num;               // XOR with array
+            for (int num : arr)
+            {
+                if(num>n){return 1;}
+                xor ^= num;               // XOR with array
+            }
 
             return xor; // same numbers cancel out, missing remains
         }
+
+    public static int missingNoUsingSum(int[] arr){
+        int n = arr.length+1;
+        int sum = n*(n+1)/2;
+        for(int num: arr){
+            if(num>n){return 1;}
+            sum-=num;
+        }
+        return sum;
+    }
 
 
     public static void main(String[] args) {
@@ -41,5 +55,6 @@ public class FindMissingNumber {
         int[] arr = {8,7,6,5,4,3,1};
         //System.out.println(findMissingNumber(arr));
         System.out.println(missingNoXor(arr));
+        System.out.println(missingNoUsingSum(arr));
     }
 }
