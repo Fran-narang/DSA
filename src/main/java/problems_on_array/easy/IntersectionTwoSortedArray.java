@@ -1,6 +1,5 @@
-package problems_on_array;
+package problems_on_array.easy;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

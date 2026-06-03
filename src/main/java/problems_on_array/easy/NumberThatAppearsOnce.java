@@ -1,8 +1,7 @@
-package problems_on_array;
+package problems_on_array.easy;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class NumberThatAppearsOnce {
 
